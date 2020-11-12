@@ -15,26 +15,24 @@ const Header = ({ currentUser, hidden }) => (
     <Link className="logo-container" to="/">
       <Logo className="logo" />
     </Link>
-    <div className="header-design">We design your clothes for you!</div>
     <div className="options">
       <Link className="option" to="/shop">
-        Shop
+        SHOP
       </Link>
       <Link className="option" to="/shop">
-        Contact
+        CONTACT
       </Link>
       {currentUser ? (
         <div className="option" onClick={() => auth.signOut()}>
-          Sign out
+          SIGN OUT
         </div>
       ) : (
         <Link className="option" to="/signin">
-          sign in
+          SIGN IN
         </Link>
       )}
       <CardIcon />
     </div>
-
     {hidden ? null : <CartDropdown />}
   </div>
 );
